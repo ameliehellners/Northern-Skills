@@ -1,0 +1,158 @@
+/**** Portfolio ****/
+
+/* Grid - Flex container*/
+.grid{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: wrap;
+	-ms-flex-direction: wrap;
+	flex-direction: wrap;
+}
+
+/* Grid - Item */
+.grid-box {
+	position: relative;
+	-webkit-box-flex: 100%;
+	-webkit-flex: 100%;
+	-ms-flex: 100%;
+	flex: 100%;
+	/* additionally, equal width */
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	background: #252525;
+	overflow: hidden;
+	cursor: pointer;
+}
+@media screen and (min-width: 740px) {
+	.grid-box {
+		-webkit-box-flex: 50%;
+		-webkit-flex: 50%;
+		-ms-flex: 50%;
+		flex: 50%;
+		max-width: 50%;
+	}
+}
+@media screen and (min-width: 1020px) {
+	.grid-box {
+		-webkit-box-flex: 33.333%;
+		-webkit-flex: 33.333%;
+		-ms-flex: 33.333%;
+		flex: 33.333%;
+		max-width: 33.333%;
+	}
+}
+
+/* Grid - Content inside item */
+.grid-content {
+	position: relative;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	padding: 20px;
+	padding-bottom: 60px;
+	width: 100%;
+	-webkit-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	transform: translateY(100%);
+
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+
+	top: -70px;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+/* Grid - h2 and p */
+.grid-content h2 {
+	position: relative;
+	display: inline-block;
+	font-weight: 300;
+	font-size: 1.5rem;
+	margin: 0;
+	padding-bottom: 10px;
+	padding-right: 5px;
+}
+.grid-content h2:after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 100%;
+	border-bottom: 2px solid #fff;
+	-webkit-transition: all 0.7s;
+	transition: all 0.7s;
+}
+.grid-content p {
+	font-size: 1rem;
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+/* Grid - Item hover states */
+.grid-box.active .grid-content, 
+.grid-box:hover .grid-content {
+	top: 0;
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+}
+.grid-box.active .grid-content h2:after, 
+.grid-box:hover .grid-content h2:after {
+	right: 0;
+}
+.grid-box.active .grid-content p, 
+.grid-box:hover .grid-content p {
+	opacity: 1;
+}
+.grid-box.active:before, 
+.grid-box:hover:before {
+	-webkit-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	transform: scale(1.05);
+}
+
+/* Grid - Item backgrounds */
+.grid-box:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-position: center;
+	background-size: cover;
+	-webkit-transition: all 1s;
+	transition: all 1s;
+}
+.grid-box:nth-child(1):before {
+	background-image: url("https://unsplash.it/1000/500?image=14");
+}
+.grid-box:nth-child(2):before {
+	background-image: url("https://unsplash.it/1000/500?image=10");
+}
+.grid-box:nth-child(3):before {
+	background-image: url("https://unsplash.it/1000/500?image=11");
+}
+.grid-box:nth-child(4):before {
+	background-image: url("https://unsplash.it/1000/500?image=12");
+}
+.grid-box:nth-child(5):before {
+	background-image: url("https://unsplash.it/1000/500?image=15");
+}
+.grid-box:nth-child(6):before {
+	background-image: url("https://unsplash.it/1000/500?image=17");
+}
+
+
+
