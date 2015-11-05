@@ -4,11 +4,16 @@
 	big-margin: 30px;
 	width: 1040px;
 
+	base-clr: #01737f;
+
 	Index:
 	I   : Base
 	II  : Layout
 	III : Helpers
 */
+
+/* Ionicons (icons) */
+@import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 
 /* Font */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic,300italic,300|Source+Sans+Pro:400,300italic,300,400italic,700,700italic);
@@ -35,6 +40,9 @@ body{
 	margin: 0 auto;
 	letter-spacing: 0.04em;
 	color: #000;
+}
+a{
+	text-decoration: none;
 }
 
 /* Headings */
@@ -122,4 +130,41 @@ section{
 }
 
 /**** Buttons ****/
+.btn{
+    display: inline-block;
+    vertical-align: middle;
+    outline: 0;
+    border: 0;
+    border-radius: 0;
+    padding: 0 1.5em;
+    margin: 15px auto;
+    margin-bottom: 0;
+    margin-right: 5px;
+    line-height: 3.1em;
+    height: 3.1em;
+    font-weight: inherit;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: background-color 0.3s;
+}
+.btn:after{
+	content: '\f3d6';
+	position: relative;
+	font-family: Ionicons;
+	font-size: 1.2em;
+	margin-left: 0.8em;
+	top: -1px;
+	vertical-align: middle;
+}
+.btn-primary{
+    background-color: #01737f;
+}
+.btn-primary:hover{
+	background-color: #26848e;
+}
 /* Will add buttons here */
