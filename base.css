@@ -1,3 +1,179 @@
+/*
+	Notes (variables):
+	base-margin: 15px;
+	big-margin: 30px;
+	width: 1040px;
+
+	base-clr: #01737f;
+
+	Index:
+	I   : Base
+	II  : Layout
+	III : Helpers
+*/
+
+/* Ionicons (icons) */
+@import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+/* Font */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic,300italic,300|Source+Sans+Pro:400,300italic,300,400italic,700,700italic);
+/*
+  font-family: 'Open Sans', sans-serif;
+*/
+
+
+/**** I : Base ****/
+*{
+	box-sizing: border-box;
+}
+html, body{
+	margin: 0;
+	padding: 0;
+}
+html{
+	background: #fefefe;
+}
 body{
-	background: red;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	margin: 0 auto;
+	letter-spacing: 0.04em;
+	color: #000;
+}
+a{
+	text-decoration: none;
+}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Source Sans Pro', sans-serif;
+	margin: 15px auto; /* Margin-v */
+}
+h1{
+	font-size: 2.5rem;
+}
+h2{
+	font-size: 2.0rem;
+}
+h3{
+	font-size: 1.5rem;	
+}
+h4{
+	font-size: 1.3rem;
+}
+
+/* Paragraf */
+p{
+	line-height: 1.5em;
+	margin: 15px 0; /* Margin-v */
+}
+
+/**** II : Layout ****/
+section{
+	margin-left: auto;
+	margin-right: auto;
+	background: peachpuff;
+}
+.container{
+	display: block;
+	width: 1040px;
+	max-width: 100%;
+}
+
+
+/**** III : Helpers ****/
+
+/* Paddings */
+.p-l{
+	padding-left: 30px!important;
+}
+.p-r{
+	padding-right: 30px!important;
+}
+.p-t{
+	padding-top: 30px!important;
+}
+.p-b{
+	padding-bottom: 30px!important;
+}
+.p-all{
+	padding: 30px!important;
+}
+.p-no{
+	margin: 0;
+}
+
+/* Margins */
+.m-l{
+	margin-left: 30px!important;
+}
+.m-r{
+	margin-right: 30px!important;
+}
+.m-t{
+	margin-top: 30px!important;
+}
+.m-b{
+	margin-bottom: 30px!important;
+}
+.m-all{
+	margin: 30px!important;
+}
+.m-no{
+	margin: 0;
+}
+
+/* Colors */
+.white{
+	color: #fff;
+}
+
+/* Background colors */
+.back-grey{
+	background-color: #f3f3f3;
+}
+
+/**** Buttons ****/
+.btn{
+    display: inline-block;
+    vertical-align: middle;
+    outline: 0;
+    border: 0;
+    border-radius: 0;
+    padding: 0 1.2em;
+    margin: 15px auto;
+    margin-bottom: 0;
+    margin-right: 5px;
+    line-height: 2.8em;
+    height: 2.8em;
+    font-weight: inherit;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: background-color 0.3s;
+}
+.btn:after{
+	content: '\f3d6';
+	position: relative;
+	font-family: Ionicons;
+	font-size: 1.2em;
+	margin-left: 0.8em;
+	top: -1px;
+	vertical-align: middle;
+}
+.btn-primary{
+    background-color: #01737f;
+}
+.btn-primary:hover{
+	background-color: #26848e;
+}
+
+/* Button size */
+.btn-small{
+	font-size: 0.8rem;
 }
