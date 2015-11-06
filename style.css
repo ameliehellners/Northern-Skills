@@ -1,0 +1,85 @@
+.containerz {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+header {
+  position: fixed;
+  top: 0;
+  height: 100px;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+}
+
+header img {
+  height: 70px;
+  float: left;
+}
+
+header.scrolled {
+  background-color: #202020;
+}
+
+
+/* Navigation */
+
+nav ul {
+  list-style: none;
+  float: right;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 30px;
+  line-height: 1rem;
+}
+
+nav a {
+  font-size: 1rem;
+  color: #fefefe;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #18c1e6;
+}
+
+
+/* Landing Page */
+
+.landing {
+  height: 85vh;
+  width: 100%;
+  color: #fefefe;
+  background: #333 url('img/landing_bg.jpeg') center center no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 12rem 30px 30px;
+}
+
+.landing h1 {
+  font-size: 2rem;
+}
+
+.landing p {
+  font-size: 1rem;
+  width: 60%;
+}
+
+.landing button {
+  margin-top: 1rem;
+  width: 150px;
+  height: 44px;
+  border: none;
+  background-color: rgba(17, 127, 152, 0.7);
+  color: #fefefe;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.landing button:hover {
+  background-color: rgba(47, 166, 193, 1);
+}
