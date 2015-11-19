@@ -57,7 +57,7 @@ h2{
 	font-size: 2.0rem;
 }
 h3{
-	font-size: 1.5rem;	
+	font-size: 1.5rem;
 }
 h4{
 	font-size: 1.3rem;
@@ -71,11 +71,11 @@ p{
 
 /**** II : Layout ****/
 section{
-	margin-left: auto;
-	margin-right: auto;
 	background: peachpuff;
 }
 .container{
+	margin-left: auto;
+	margin-right: auto;
 	display: block;
 	width: 1040px;
 	max-width: 100%;
@@ -129,6 +129,11 @@ section{
 	color: #fff;
 }
 
+/* Background colors */
+.back-grey{
+	background-color: #f3f3f3;
+}
+
 /**** Buttons ****/
 .btn{
     display: inline-block;
@@ -136,12 +141,12 @@ section{
     outline: 0;
     border: 0;
     border-radius: 0;
-    padding: 0 1.5em;
+    padding: 0 1.2em;
     margin: 15px auto;
     margin-bottom: 0;
     margin-right: 5px;
-    line-height: 3.1em;
-    height: 3.1em;
+    line-height: 2.8em;
+    height: 2.8em;
     font-weight: inherit;
     color: #fff;
     text-align: center;
@@ -167,4 +172,8 @@ section{
 .btn-primary:hover{
 	background-color: #26848e;
 }
-/* Will add buttons here */
+
+/* Button size */
+.btn-small{
+	font-size: 0.8rem;
+}
