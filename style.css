@@ -5,10 +5,6 @@ section.landing {
   background-size: cover;
 }
 
-section div.container {
-  padding-top: 200px;
-}
-
 /* Header */
 
 header {
@@ -18,74 +14,75 @@ header {
   position: fixed;
   top: 0;
   z-index: 100;
-  padding-top: 20px;
-  transition: all 0.8s;
+  padding: 30px 30px 0;
+  transition: all .6s;
+}
+
+header.fixed {
+  height: 70px;
+  background-color: #131313;
+  padding-top: 5px;
 }
 
 header.active {
-  background-color: #232323;
-}
-
-header.scrolled {
-  height: 60px;
-  background-color: #232323;
-  padding-top: 0;
+  background-color: #131313;
 }
 
 header img {
-  height: 90px;
+  margin-top: -10px;
+  height: 80px;
   float: left;
+  transition: height .6s;
+}
+
+header.fixed img {
+  margin-top: 0;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  height: 70px;
 }
 
 .ion-navicon {
   color: #fff;
-  font-size: 3rem;
+  font-size: 45px;
   line-height: 60px;
   float: right;
 }
 
+.ion-navicon:hover {
+  color: #18c1e6;
+}
+
 i.active {
-  color: green;
-}
-
-header.scrolled {
-  position: fixed;
-  top: 0;
-  background-color: rgba(32, 32, 32, 0.95);
-}
-
-header.scrolled img {
-  height: 60px;
+  color: #18c1e6;
 }
 
 
 /* Navigation */
-@media screen and (max-width: 739px) {
+@media screen and (max-width: 649px) {
   nav {
-    background-color: rgba(22, 22, 22, 0.95);
+    background-color: #333;
     position: absolute;
     padding: 0;
     top: 120px;
     left: 0;
     width: 100%;
-    display: none;
+    opacity: 0;
+    transition: all 0.6s;
   }
 
   nav.active {
-    display: block;
+    opacity: 1;
   }
 
-  nav.scrolled {
-    top: 60px;
+  header.fixed nav {
+    top: 70px;
   }
 
   nav ul {
-    margin: 20px 0;
+    margin: 10px 0;
     list-style: none;
     padding: 0;
-  }
-
-  li {
   }
 
   nav ul > a {
@@ -93,16 +90,17 @@ header.scrolled img {
     display: block;
     padding-left: 30px;
     height: 44px;
-    margin: 10px 0;
+    margin: 5px 0;
     line-height: 44px;
   }
 
   nav ul > a:hover {
-    background-color: #333;
+    background-color: #444;
+    color: #18c1e6;
   }
 }
 
-@media screen and (min-width: 740px) {
+@media screen and (min-width: 650px) {
   .ion-navicon {
     display: none;
   }
@@ -115,16 +113,20 @@ header.scrolled img {
 
   nav ul {
     list-style: none;
+    width: 100%;
   }
 
-  nav ul li {
-    float: right;
-    margin-right: 30px;
+  nav ul a li {
+    float: left;
+    margin-left: 30px;
+  }
+
+  nav ul a:first-of-type li {
+    margin-left: 0;
   }
 
   nav ul > a {
     display: inline;
-    margin-right: 50px;
     font-size: 1rem;
     color: #fefefe;
     transition: color 0.3s ease;
@@ -132,15 +134,16 @@ header.scrolled img {
 
   nav ul > a:hover {
     color: #18c1e6;
-    background-color: none;
+    border-bottom: 1px solid;
   }
 }
 
 
 /* Landing Page */
 
-.landing {
-  background: none;
+.landing .container {
+  padding-top: 200px;
+  padding-bottom: 100px;
 }
 
 h1 {
@@ -148,8 +151,12 @@ h1 {
 }
 
 .landing p {
-  font-size: 1rem;
+  font-size: 1.25rem;
   max-width: 550px;
+}
+
+.landing .btn {
+  font-size: 1rem;
 }
 
 /**** Portfolio ****/
