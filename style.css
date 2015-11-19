@@ -3,15 +3,19 @@
   margin: 0 auto;
 }
 
+.div_landing {
+  min-height: 85vh;
+  width: 100%;
+  background: #333 url('img/landing_bg.jpeg') center center no-repeat;
+  background-size: cover;
+}
+
 /* Header */
 
 header {
-  position: fixed;
-  top: 0;
-  height: 100px;
+  height: 140px;
   width: 100%;
   margin: 0;
-  padding: 20px;
 }
 
 header img {
@@ -20,21 +24,33 @@ header img {
 }
 
 header.scrolled {
+  position: fixed;
+  top: 0;
   background-color: #202020;
 }
 
 
 /* Navigation */
 
+nav {
+  float: right;
+}
+
+nav:after{
+  color: #fff;
+	content: '\f20e';
+	font-family: Ionicons;
+	font-size: 2.5em;
+}
+
 nav ul {
   list-style: none;
-  float: right;
+  display: none;
 }
 
 nav ul li {
   display: inline;
-  margin-right: 30px;
-  line-height: 1rem;
+  margin-right: 20px;
 }
 
 nav a {
@@ -51,35 +67,14 @@ nav a:hover {
 /* Landing Page */
 
 .landing {
-  height: 85vh;
-  width: 100%;
-  color: #fefefe;
-  background: #333 url('img/landing_bg.jpeg') center center no-repeat;
-  background-size: cover;
-  margin: 0;
-  padding: 12rem 30px 30px;
+  background: none;
 }
 
-.landing h1 {
+h1 {
   font-size: 2rem;
 }
 
 .landing p {
   font-size: 1rem;
-  width: 60%;
-}
-
-.landing button {
-  margin-top: 1rem;
-  width: 150px;
-  height: 44px;
-  border: none;
-  background-color: rgba(17, 127, 152, 0.7);
-  color: #fefefe;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-}
-
-.landing button:hover {
-  background-color: rgba(47, 166, 193, 1);
+  max-width: 550px;
 }
