@@ -8,14 +8,17 @@ section.landing {
 /* Header */
 
 header {
-  height: 120px;
+  height: 130px;
   width: 100%;
   margin: 0;
   position: fixed;
   top: 0;
   z-index: 100;
-  padding: 30px 30px 0;
-  transition: all .6s;
+  padding: 40px 30px 0;
+  -webkit-transition: all 800ms;
+     -moz-transition: all 800ms;
+       -o-transition: all 800ms;
+          transition: all 800ms;
 }
 
 header.fixed {
@@ -28,18 +31,41 @@ header.active {
   background-color: #131313;
 }
 
-header img {
-  margin-top: -10px;
+header .logo > img {
+  position: absolute;
+  top: 20px;
+  left: 130px;
   height: 80px;
   float: left;
-  transition: height .6s;
+  -webkit-transition: all 800ms;
+     -moz-transition: all 800ms;
+       -o-transition: all 800ms;
+          transition: all 800ms;
 }
 
-header.fixed img {
-  margin-top: 0;
-  padding-top: 2px;
-  padding-bottom: 4px;
-  height: 70px;
+header .logo > h1 {
+  color: #fefefe;
+  font-family: 'Open Sans';
+  font-weight: 100;
+  font-size: 1.75rem;
+  position: absolute;
+  top: 60px;
+  left: 30px;
+  -webkit-transition: all 800ms;
+     -moz-transition: all 800ms;
+       -o-transition: all 800ms;
+          transition: all 800ms;
+}
+
+header.fixed .logo > img {
+  top: 10px;
+  left: 168px;
+  height: 50px;
+}
+
+header.fixed .logo > h1 {
+  font-size: 1em;
+  top: 8px;
 }
 
 .ion-navicon {
@@ -47,11 +73,13 @@ header.fixed img {
   font-size: 45px;
   line-height: 60px;
   float: right;
+  transition: color 200ms;
 }
 
 .ion-navicon:hover,
 header i.active {
   color: #18c1e6;
+  cursor: pointer;
 }
 
 
@@ -61,15 +89,20 @@ header i.active {
     background-color: #232323;
     position: absolute;
     padding: 0;
-    top: 120px;
+    top: 130px;
     left: 0;
     width: 100%;
-    display: none;
-    transition: all 0.6s;
+    opacity: 0;
+    transform: translateX(100%);
+    -webkit-transition: all 400ms, top 800ms;
+       -moz-transition: all 400ms, top 800ms;
+         -o-transition: all 400ms, top 800ms;
+            transition: all 400ms, top 800ms; /* easeInOutCubic */
   }
 
   nav.active {
-    display: block;
+    opacity: 1;
+    transform: translateX(0);
   }
 
   header.fixed nav {
@@ -89,6 +122,7 @@ header i.active {
     height: 44px;
     margin: 5px 0;
     line-height: 44px;
+    transition: color 200ms, background-color 300ms;
   }
 
   nav ul > a:hover {
@@ -115,7 +149,7 @@ header i.active {
 
   nav ul a li {
     float: left;
-    margin-left: 30px;
+    margin-left: 40px;
   }
 
   nav ul a:first-of-type li {
@@ -126,7 +160,7 @@ header i.active {
     display: inline;
     font-size: 1rem;
     color: #fefefe;
-    transition: color 0.3s ease;
+    transition: color 200ms;
   }
 
   nav ul > a:hover {
@@ -139,7 +173,7 @@ header i.active {
 /* Landing Page */
 
 .landing .container {
-  padding-top: 200px;
+  padding-top: 180px;
   padding-bottom: 100px;
 }
 

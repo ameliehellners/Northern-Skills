@@ -44,6 +44,9 @@ body{
 a{
 	text-decoration: none;
 }
+.img-responsive{
+	max-width: 100%;
+}
 
 /* Headings */
 h1,h2,h3,h4,h5,h6{
@@ -79,8 +82,23 @@ section{
 	display: block;
 	width: 1040px;
 	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
 }
-
+/* Column layout */
+@media screen and (min-width: 740px) {
+	.flex{
+		display: flex;
+	}
+}
+.flex-vertical-center{
+	align-items: center;
+}
+.col{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 30px;
+}
 
 /**** III : Helpers ****/
 
@@ -132,6 +150,9 @@ section{
 /* Background colors */
 .back-grey{
 	background-color: #f3f3f3;
+}
+.back-darkgrey{
+	background-color: #565656;
 }
 
 /**** Buttons ****/

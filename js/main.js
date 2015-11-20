@@ -10,7 +10,7 @@ menuBtn.addEventListener('click', function (){
 });
 
 window.onscroll = function() {
-  scrolling(head, 'fixed', '50');
+  scrolling(head, 'fixed', '20');
 };
 
 function scrolling(obj, customClass, y) {
