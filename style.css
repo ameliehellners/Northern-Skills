@@ -49,11 +49,8 @@ header.fixed img {
   float: right;
 }
 
-.ion-navicon:hover {
-  color: #18c1e6;
-}
-
-i.active {
+.ion-navicon:hover,
+header i.active {
   color: #18c1e6;
 }
 
@@ -61,18 +58,18 @@ i.active {
 /* Navigation */
 @media screen and (max-width: 649px) {
   nav {
-    background-color: #333;
+    background-color: #232323;
     position: absolute;
     padding: 0;
     top: 120px;
     left: 0;
     width: 100%;
-    opacity: 0;
+    display: none;
     transition: all 0.6s;
   }
 
   nav.active {
-    opacity: 1;
+    display: block;
   }
 
   header.fixed nav {
