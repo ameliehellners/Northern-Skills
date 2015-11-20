@@ -84,11 +84,6 @@ section{
 	margin-right: auto;
 }
 /* Column layout */
-@media screen and (min-width: 740px) {
-	.flex{
-		display: flex;
-	}
-}
 .flex-vertical-center{
 	align-items: center;
 }
@@ -96,6 +91,17 @@ section{
     flex-grow: 1;
     flex-basis: 0;
     padding: 30px;
+}
+@media screen and (min-width: 740px) {
+	.flex{
+		display: flex;
+	}
+	.col-first{
+		padding-left: 0;
+	}
+	.col-last{
+		padding-right: 0;
+	}
 }
 
 /**** III : Helpers ****/
@@ -117,7 +123,7 @@ section{
 	padding: 30px!important;
 }
 .p-no{
-	margin: 0;
+	padding: 0;
 }
 
 /* Margins */
