@@ -8,13 +8,13 @@ section.landing {
 /* Header */
 
 header {
-  height: 130px;
+  height: 110px;
   width: 100%;
   margin: 0;
   position: fixed;
   top: 0;
   z-index: 100;
-  padding: 40px 30px 0;
+  padding: 25px 30px 0;
   -webkit-transition: all 800ms;
      -moz-transition: all 800ms;
        -o-transition: all 800ms;
@@ -22,34 +22,35 @@ header {
 }
 
 header.fixed {
-  height: 70px;
+  height: 60px;
   background-color: #131313;
-  padding-top: 5px;
+  padding-top: 0;
 }
 
 header.active {
   background-color: #131313;
 }
 
-header .logo > img {
+
+/*** LOGOTYP ***/
+
+header .logo > img.logo-icon {
   position: absolute;
-  top: 20px;
-  left: 130px;
-  height: 80px;
   float: left;
+  height: 60px;
+  top: 20px;
+  left: 124px;
   -webkit-transition: all 800ms;
      -moz-transition: all 800ms;
        -o-transition: all 800ms;
           transition: all 800ms;
 }
 
-header .logo > h1 {
+header .logo > img.logo-text {
   color: #fefefe;
-  font-family: 'Open Sans';
-  font-weight: 100;
-  font-size: 1.75rem;
   position: absolute;
-  top: 60px;
+  width: 170px;
+  top: 64px;
   left: 30px;
   -webkit-transition: all 800ms;
      -moz-transition: all 800ms;
@@ -57,15 +58,15 @@ header .logo > h1 {
           transition: all 800ms;
 }
 
-header.fixed .logo > img {
-  top: 10px;
-  left: 168px;
-  height: 50px;
+header.fixed .logo > img.logo-icon {
+  top: 13px;
+  left: 175px;
+  height: 35px;
 }
 
-header.fixed .logo > h1 {
-  font-size: 1em;
-  top: 8px;
+header.fixed .logo > img.logo-text {
+  width: 140px;
+  top: 18px;
 }
 
 .ion-navicon {
@@ -84,7 +85,48 @@ header i.active {
 
 
 /* Navigation */
-@media screen and (max-width: 649px) {
+
+@media screen and (min-width: 450px) {
+
+  header {
+    height: 130px;
+    padding-top: 40px;
+  }
+
+  header.fixed {
+    height: 60px;
+    padding-top: 0;
+  }
+
+  header .logo > img.logo-icon {
+    height: 80px;
+    top: 20px;
+    left: 130px;
+  }
+
+  header .logo > img.logo-text {
+    width: 200px;
+    top: 78px;
+  }
+
+  header.fixed .logo > img.logo-icon {
+    top: 10px;
+    left: 215px;
+    height: 40px;
+  }
+
+  header.fixed .logo > img.logo-text {
+    width: 180px;
+    top: 14px;
+  }
+
+  nav {
+    top: 110px;
+  }
+}
+
+@media screen and (max-width: 669px) {
+
   nav {
     background-color: #232323;
     position: absolute;
@@ -92,7 +134,6 @@ header i.active {
     top: 130px;
     left: 0;
     width: 100%;
-    opacity: 0;
     transform: translateX(100%);
     -webkit-transition: all 400ms, top 800ms;
        -moz-transition: all 400ms, top 800ms;
@@ -101,12 +142,11 @@ header i.active {
   }
 
   nav.active {
-    opacity: 1;
     transform: translateX(0);
   }
 
   header.fixed nav {
-    top: 70px;
+    top: 60px;
   }
 
   nav ul {
@@ -131,7 +171,16 @@ header i.active {
   }
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 670px) {
+
+  header.active {
+    background-color: transparent;
+  }
+
+  header.fixed {
+    background-color: #131313;
+  }
+
   .ion-navicon {
     display: none;
   }
@@ -140,6 +189,7 @@ header i.active {
     position: relative;
     display: block;
     float: right;
+    top: 0;
   }
 
   nav ul {
@@ -149,7 +199,11 @@ header i.active {
 
   nav ul a li {
     float: left;
-    margin-left: 40px;
+    margin-left: 30px;
+    -webkit-transition: margin 800ms;
+       -moz-transition: margin 800ms;
+         -o-transition: margin 800ms;
+            transition: margin 800ms;
   }
 
   nav ul a:first-of-type li {
@@ -166,6 +220,46 @@ header i.active {
   nav ul > a:hover {
     color: #18c1e6;
     border-bottom: 1px solid;
+  }
+}
+
+
+@media screen and (min-width: 1440px) {
+
+  header {
+    height: 160px;
+    padding-top: 50px;
+  }
+
+  header.fixed {
+    height: 70px;
+    padding-top: 5px;
+  }
+
+  header .logo > img.logo-icon {
+    height: 100px;
+    top: 20px;
+    left: 175px;
+  }
+
+  header .logo > img.logo-text {
+    width: 270px;
+    top: 90px;
+  }
+
+  header.fixed .logo > img.logo-icon {
+    top: 12px;
+    left: 260px;
+    height: 50px;
+  }
+
+  header.fixed .logo > img.logo-text {
+    width: 220px;
+    top: 16px;
+  }
+
+  nav ul a li {
+    margin-left: 50px;
   }
 }
 
