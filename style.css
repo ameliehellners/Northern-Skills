@@ -1,7 +1,7 @@
 section.landing {
-  min-height: 85vh;
+  padding: 160px 0 80px;
   width: 100%;
-  background: #333 url('img/landing_bg.jpeg') center center no-repeat;
+  background: #333 url('img/landing_bg.jpg') center center no-repeat;
   background-size: cover;
 }
 
@@ -14,7 +14,7 @@ header {
   position: fixed;
   top: 0;
   z-index: 100;
-  padding: 25px 30px 0;
+  padding: 25px 20px 0;
   -webkit-transition: all 800ms;
      -moz-transition: all 800ms;
        -o-transition: all 800ms;
@@ -39,7 +39,7 @@ header .logo > img.logo-icon {
   float: left;
   height: 60px;
   top: 20px;
-  left: 124px;
+  left: 114px;
   -webkit-transition: all 800ms;
      -moz-transition: all 800ms;
        -o-transition: all 800ms;
@@ -51,7 +51,7 @@ header .logo > img.logo-text {
   position: absolute;
   width: 170px;
   top: 64px;
-  left: 30px;
+  left: 20px;
   -webkit-transition: all 800ms;
      -moz-transition: all 800ms;
        -o-transition: all 800ms;
@@ -60,7 +60,7 @@ header .logo > img.logo-text {
 
 header.fixed .logo > img.logo-icon {
   top: 13px;
-  left: 175px;
+  left: 165px;
   height: 35px;
 }
 
@@ -86,32 +86,74 @@ header i.active {
 
 /* Navigation */
 
+nav {
+  background-color: #232323;
+  position: absolute;
+  padding: 0;
+  top: 0;
+  margin-top: 110px;
+  left: 0;
+  width: 100%;
+  transform: translateX(100%);
+  -webkit-transition: transform 400ms, margin-top 800ms;
+  -moz-transition: transform 400ms, margin-top 800ms;
+  -o-transition: transform 400ms, margin-top 800ms;
+  transition: transform 400ms, margin-top 800ms; /* easeInOutCubic */
+}
+
+nav.active {
+  transform: translateX(0);
+}
+
+header.fixed nav {
+  margin-top: 60px;
+}
+
+nav ul {
+  margin: 10px 0;
+  list-style: none;
+  padding: 0;
+}
+
+nav ul > a {
+  color: #fff;
+  display: block;
+  text-align: center;
+  height: 44px;
+  line-height: 44px;
+  transition: color 200ms, background-color 300ms;
+}
+
+nav ul > a:hover {
+  background-color: #444;
+  color: #18c1e6;
+}
+
 @media screen and (min-width: 450px) {
 
   header {
     height: 130px;
-    padding-top: 40px;
+    padding: 25px 30px 0;
   }
 
-  header.fixed {
-    height: 60px;
-    padding-top: 0;
+  nav {
+    margin-top: 130px;
   }
 
   header .logo > img.logo-icon {
-    height: 80px;
-    top: 20px;
-    left: 130px;
+    height: 70px;
+    left: 140px;
   }
 
   header .logo > img.logo-text {
     width: 200px;
-    top: 78px;
+    top: 72px;
+    left: 30px;
   }
 
   header.fixed .logo > img.logo-icon {
     top: 10px;
-    left: 215px;
+    left: 217px;
     height: 40px;
   }
 
@@ -119,59 +161,17 @@ header i.active {
     width: 180px;
     top: 14px;
   }
-
-  nav {
-    top: 110px;
-  }
-}
-
-@media screen and (max-width: 669px) {
-
-  nav {
-    background-color: #232323;
-    position: absolute;
-    padding: 0;
-    top: 130px;
-    left: 0;
-    width: 100%;
-    transform: translateX(100%);
-    -webkit-transition: all 400ms, top 800ms;
-       -moz-transition: all 400ms, top 800ms;
-         -o-transition: all 400ms, top 800ms;
-            transition: all 400ms, top 800ms; /* easeInOutCubic */
-  }
-
-  nav.active {
-    transform: translateX(0);
-  }
-
-  header.fixed nav {
-    top: 60px;
-  }
-
-  nav ul {
-    margin: 10px 0;
-    list-style: none;
-    padding: 0;
-  }
-
-  nav ul > a {
-    color: #fff;
-    display: block;
-    padding-left: 30px;
-    height: 44px;
-    margin: 5px 0;
-    line-height: 44px;
-    transition: color 200ms, background-color 300ms;
-  }
-
-  nav ul > a:hover {
-    background-color: #444;
-    color: #18c1e6;
-  }
 }
 
 @media screen and (min-width: 670px) {
+
+  section.landing {
+    padding: 200px 0 120px;
+  }
+
+  header {
+    padding: 25px 50px 0;
+  }
 
   header.active {
     background-color: transparent;
@@ -189,7 +189,15 @@ header i.active {
     position: relative;
     display: block;
     float: right;
-    top: 0;
+    top: -120px;
+    background-color: transparent;
+    transform: translateX(0);
+    width: auto;
+    transition: none;
+  }
+
+  header.fixed nav {
+    top: -64px;
   }
 
   nav ul {
@@ -224,11 +232,15 @@ header i.active {
 }
 
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1240px) {
+
+  section.landing {
+    padding: 240px 0 140px;
+  }
 
   header {
     height: 160px;
-    padding-top: 50px;
+    padding-top: 30px;
   }
 
   header.fixed {
@@ -266,18 +278,13 @@ header i.active {
 
 /* Landing Page */
 
-.landing .container {
-  padding-top: 180px;
-  padding-bottom: 100px;
-}
-
 h1 {
   font-size: 2rem;
 }
 
 .landing p {
   font-size: 1.25rem;
-  max-width: 550px;
+  max-width: 700px;
 }
 
 .landing .btn {
