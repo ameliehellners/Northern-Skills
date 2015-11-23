@@ -31,15 +31,21 @@ html, body{
 	padding: 0;
 }
 html{
+	font-size: 16px;
 	background: #fefefe;
 }
 body{
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
-	font-size: 18px;
 	margin: 0 auto;
+	font-size: 1rem;
 	letter-spacing: 0.04em;
 	color: #000;
+}
+@media (min-width: 740px){
+	html{
+		font-size: 18px;
+	}
 }
 a{
 	text-decoration: none;
@@ -173,6 +179,7 @@ section{
     margin: 15px auto;
     margin-bottom: 0;
     margin-right: 5px;
+    font-size: 1rem;
     line-height: 2.8em;
     height: 2.8em;
     font-weight: inherit;
