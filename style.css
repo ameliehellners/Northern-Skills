@@ -344,6 +344,15 @@ h1 {
 		max-width: 33.333%;
 	}
 }
+@media screen and (min-width: 2000px) {
+	.grid-box {
+		-webkit-box-flex: 16.666%;
+		-webkit-flex: 16.666%;
+		-ms-flex: 16.666%;
+		flex: 16.666%;
+		max-width: 16.666%;
+	}
+}
 
 /* Grid - Content inside item */
 .grid-content {
