@@ -93,7 +93,7 @@ header.fixed .logo > img.logo-text {
   top: 18px;
 }
 
-.ion-navicon {
+.menu-icons .icon {
   color: #fff;
   font-size: 45px;
   line-height: 60px;
@@ -101,10 +101,22 @@ header.fixed .logo > img.logo-text {
   transition: color 200ms;
 }
 
-.ion-navicon:hover,
-header i.active {
+.menu-icons .ion-close-round {
+  font-size: 32px;
+  display: none;
+}
+
+.menu-icons .icon:hover {
   color: #18c1e6;
   cursor: pointer;
+}
+
+div.menu-icons.active .ion-navicon {
+  display: none;
+}
+
+div.menu-icons.active .ion-close-round {
+  display: block;
 }
 
 
@@ -159,7 +171,7 @@ nav ul > a:hover {
   color: #18c1e6;
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 400px) {
 
   header {
     height: 130px;
@@ -193,10 +205,10 @@ nav ul > a:hover {
   }
 }
 
-@media screen and (min-width: 670px) {
+@media screen and (min-width: 600px) {
 
   section.landing {
-    padding: 200px 0 120px;
+    padding: 260px 0 140px;
   }
 
   header {
@@ -211,7 +223,7 @@ nav ul > a:hover {
     background-color: #131313;
   }
 
-  .ion-navicon {
+  .menu-icons {
     display: none;
   }
 
@@ -257,7 +269,6 @@ nav ul > a:hover {
 
   nav ul > a:hover {
     color: #18c1e6;
-    border-bottom: 1px solid;
   }
 }
 
@@ -265,7 +276,7 @@ nav ul > a:hover {
 @media screen and (min-width: 1240px) {
 
   section.landing {
-    padding: 240px 0 140px;
+    padding: 280px 0 200px;
   }
 
   header {
