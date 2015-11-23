@@ -154,5 +154,13 @@
 	background-image: url("https://unsplash.it/1000/500?image=17");
 }
 
-
-
+/**** About ****/
+.about {
+	background-color: white;
+}
+.about-header {
+	margin-top: -50px;
+}
+.about-text {
+	background-color: #eaf8f9;
+}
