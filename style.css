@@ -539,3 +539,44 @@ h1 {
 .about-text {
 	background-color: #eaf8f9;
 }
+
+/**** CONTACT ****/
+/*Contact form  */
+.map {
+  position: relative;
+}
+.contact, .map, .google_map{
+
+width:100%;
+}
+
+.google_map{
+  max-height: 300px;
+
+}
+.contact-square {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 50px;
+  width: 40%;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+
+
+input[type="text"],
+input[type="email"],
+textarea{
+  background-color: #c4c4c4;
+  border: none;
+  height: auto;
+  width: 30%;
+  flex: 0;
+}
+
+input[type="text"],
+input[type="email"]{
+
+}
+
