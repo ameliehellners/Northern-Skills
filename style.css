@@ -115,10 +115,6 @@ span {
   transition: all 200ms ease-in-out;
 }
 
-.menu-icon:hover span {
-  background-color: #18c1e6;
-}
-
 
 /* Induvidual placement of span elements */
 
