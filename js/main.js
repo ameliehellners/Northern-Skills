@@ -37,3 +37,5 @@ function toggleClass(el, ourClass){
      el.className = classes + ' ' + ourClass;
    }
 }
+
+//Google Maps Script
