@@ -1,3 +1,296 @@
+section.landing {
+  padding: 160px 0 80px;
+  width: 100%;
+  background: #333 url('img/landing_bg.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+/* Header */
+
+header {
+  height: 110px;
+  width: 100%;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  padding: 25px 20px 0;
+  -webkit-transition: all 800ms;
+     -moz-transition: all 800ms;
+       -o-transition: all 800ms;
+          transition: all 800ms;
+}
+
+header.fixed {
+  height: 60px;
+  background-color: #131313;
+  padding-top: 0;
+}
+
+header.active {
+  background-color: #131313;
+}
+
+
+/*** LOGOTYP ***/
+
+header .logo > img.logo-icon {
+  position: absolute;
+  float: left;
+  height: 60px;
+  top: 20px;
+  left: 114px;
+  -webkit-transition: all 800ms;
+     -moz-transition: all 800ms;
+       -o-transition: all 800ms;
+          transition: all 800ms;
+}
+
+header .logo > img.logo-text {
+  color: #fefefe;
+  position: absolute;
+  width: 170px;
+  top: 64px;
+  left: 20px;
+  -webkit-transition: all 800ms;
+     -moz-transition: all 800ms;
+       -o-transition: all 800ms;
+          transition: all 800ms;
+}
+
+header.fixed .logo > img.logo-icon {
+  top: 13px;
+  left: 165px;
+  height: 35px;
+}
+
+header.fixed .logo > img.logo-text {
+  width: 140px;
+  top: 18px;
+}
+
+.ion-navicon {
+  color: #fff;
+  font-size: 45px;
+  line-height: 60px;
+  float: right;
+  transition: color 200ms;
+}
+
+.ion-navicon:hover,
+header i.active {
+  color: #18c1e6;
+  cursor: pointer;
+}
+
+
+/* Navigation */
+
+nav {
+  background-color: #232323;
+  position: absolute;
+  padding: 0;
+  top: 0;
+  margin-top: 110px;
+  left: 0;
+  width: 100%;
+  transform: translateX(100%);
+  -webkit-transition: transform 400ms, margin-top 800ms;
+  -moz-transition: transform 400ms, margin-top 800ms;
+  -o-transition: transform 400ms, margin-top 800ms;
+  transition: transform 400ms, margin-top 800ms; /* easeInOutCubic */
+}
+
+nav.active {
+  transform: translateX(0);
+}
+
+header.fixed nav {
+  margin-top: 60px;
+}
+
+nav ul {
+  margin: 10px 0;
+  list-style: none;
+  padding: 0;
+}
+
+nav ul > a {
+  color: #fff;
+  display: block;
+  text-align: center;
+  height: 44px;
+  line-height: 44px;
+  transition: color 200ms, background-color 300ms;
+}
+
+nav ul > a:hover {
+  background-color: #444;
+  color: #18c1e6;
+}
+
+@media screen and (min-width: 450px) {
+
+  header {
+    height: 130px;
+    padding: 25px 30px 0;
+  }
+
+  nav {
+    margin-top: 130px;
+  }
+
+  header .logo > img.logo-icon {
+    height: 70px;
+    left: 140px;
+  }
+
+  header .logo > img.logo-text {
+    width: 200px;
+    top: 72px;
+    left: 30px;
+  }
+
+  header.fixed .logo > img.logo-icon {
+    top: 10px;
+    left: 217px;
+    height: 40px;
+  }
+
+  header.fixed .logo > img.logo-text {
+    width: 180px;
+    top: 14px;
+  }
+}
+
+@media screen and (min-width: 670px) {
+
+  section.landing {
+    padding: 200px 0 120px;
+  }
+
+  header {
+    padding: 25px 50px 0;
+  }
+
+  header.active {
+    background-color: transparent;
+  }
+
+  header.fixed {
+    background-color: #131313;
+  }
+
+  .ion-navicon {
+    display: none;
+  }
+
+  nav {
+    position: relative;
+    display: block;
+    float: right;
+    top: -120px;
+    background-color: transparent;
+    transform: translateX(0);
+    width: auto;
+    transition: none;
+  }
+
+  header.fixed nav {
+    top: -64px;
+  }
+
+  nav ul {
+    list-style: none;
+    width: 100%;
+  }
+
+  nav ul a li {
+    float: left;
+    margin-left: 30px;
+    -webkit-transition: margin 800ms;
+       -moz-transition: margin 800ms;
+         -o-transition: margin 800ms;
+            transition: margin 800ms;
+  }
+
+  nav ul a:first-of-type li {
+    margin-left: 0;
+  }
+
+  nav ul > a {
+    display: inline;
+    font-size: 1rem;
+    color: #fefefe;
+    transition: color 200ms;
+  }
+
+  nav ul > a:hover {
+    color: #18c1e6;
+    border-bottom: 1px solid;
+  }
+}
+
+
+@media screen and (min-width: 1240px) {
+
+  section.landing {
+    padding: 240px 0 140px;
+  }
+
+  header {
+    height: 160px;
+    padding-top: 30px;
+  }
+
+  header.fixed {
+    height: 70px;
+    padding-top: 5px;
+  }
+
+  header .logo > img.logo-icon {
+    height: 100px;
+    top: 20px;
+    left: 175px;
+  }
+
+  header .logo > img.logo-text {
+    width: 270px;
+    top: 90px;
+  }
+
+  header.fixed .logo > img.logo-icon {
+    top: 12px;
+    left: 260px;
+    height: 50px;
+  }
+
+  header.fixed .logo > img.logo-text {
+    width: 220px;
+    top: 16px;
+  }
+
+  nav ul a li {
+    margin-left: 50px;
+  }
+}
+
+
+/* Landing Page */
+
+h1 {
+  font-size: 2rem;
+}
+
+.landing p {
+  font-size: 1.25rem;
+  max-width: 700px;
+}
+
+.landing .btn {
+  font-size: 1rem;
+}
+
 /**** Portfolio ****/
 
 /* Grid - Flex container*/
@@ -41,6 +334,7 @@
 		max-width: 50%;
 	}
 }
+
 @media screen and (min-width: 1020px) {
 	.grid-box {
 		-webkit-box-flex: 33.333%;
@@ -48,6 +342,15 @@
 		-ms-flex: 33.333%;
 		flex: 33.333%;
 		max-width: 33.333%;
+	}
+}
+@media screen and (min-width: 2000px) {
+	.grid-box {
+		-webkit-box-flex: 16.666%;
+		-webkit-flex: 16.666%;
+		-ms-flex: 16.666%;
+		flex: 16.666%;
+		max-width: 16.666%;
 	}
 }
 
@@ -100,22 +403,22 @@
 }
 
 /* Grid - Item hover states */
-.grid-box.active .grid-content, 
+.grid-box.active .grid-content,
 .grid-box:hover .grid-content {
 	top: 0;
 	-webkit-transform: translateY(0);
 	-ms-transform: translateY(0);
 	transform: translateY(0);
 }
-.grid-box.active .grid-content h2:after, 
+.grid-box.active .grid-content h2:after,
 .grid-box:hover .grid-content h2:after {
 	right: 0;
 }
-.grid-box.active .grid-content p, 
+.grid-box.active .grid-content p,
 .grid-box:hover .grid-content p {
 	opacity: 1;
 }
-.grid-box.active:before, 
+.grid-box.active:before,
 .grid-box:hover:before {
 	-webkit-transform: scale(1.05);
 	-ms-transform: scale(1.05);
