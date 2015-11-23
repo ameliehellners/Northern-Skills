@@ -2,31 +2,41 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Northern Skills</title>
-	<script src="js/main.js"></script>
 	<link rel="stylesheet" type="text/css" href="base.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
-<header>
-	<a href="#"><img alt="Northern Skills logga" src="img/logo.png"></a>
-	<nav>
+<header id="head">
+
+	<a href="#">
+		<div class="logo">
+			<img class="logo-text" alt="Northern Skills logga" src="img/logo-text.svg">
+			<img class="logo-icon" alt="Northern Skills logga" src="img/logo-mountains.svg">
+		</div>
+	</a>
+
+	<i id="menuIcon" class="icon ion-navicon"></i>
+	<nav id="nav">
 		<ul>
-			<li><a href="#">Om oss</a></li>
-			<li><a href="#">Portfolio</a></li>
-			<li><a href="#">Kunder</a></li>
-			<li><a href="#">Kontakt</a></li>
+			<a href="#"><li>Om oss</li></a>
+			<a href="#"><li>Portfolio</li></a>
+			<a href="#"><li>Kunder</li></a>
+			<a href="#"><li>Kontakt</li></a>
 		</ul>
 	</nav>
 </header>
 
 <section class="landing">
-	<h1>Lorem ipsum dolor sit amet</h1>
-	<p>
-		Proin in neque et turpis Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
-	</p>
-	<button name="read_more">Läs mer</button>
+	<div class="white p-l p-r">
+		<h1>Lorem ipsum dolor sit amet</h1>
+		<p>
+			Proin in neque et turpis Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
+		</p>
+		<button class="btn btn-primary" name="read_more">Läs mer</button>
+	</div>
 </section>
 
 <section>
@@ -76,12 +86,15 @@
 
 <section>
 	Clients
-</section><section>
+</section>
+
+<section>
 	Kontakt
 </section>
 
 <footer class="p-all back-darkgrey white">
 	<div class="container flex flex-vertical-center">
+
 		<div class="col col-first">
 
 			<img class="img-responsive" src="img/logo.png" alt="Northern Skills" />
@@ -108,5 +121,6 @@
 </footer>
 
 
+<script src="js/main.js"></script>
 </body>
 </html>
