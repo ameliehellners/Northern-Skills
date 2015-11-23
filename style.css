@@ -459,6 +459,8 @@ h1 {
 
 /**** About ****/
 .about {
+  margin: 0 auto;
+  max-width: 900px;
 	background-color: white;
 }
 .about-header {
