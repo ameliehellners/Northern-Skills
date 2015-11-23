@@ -40,10 +40,22 @@ header .logo > img.logo-icon {
   height: 60px;
   top: 20px;
   left: 114px;
-  -webkit-transition: all 800ms;
-     -moz-transition: all 800ms;
-       -o-transition: all 800ms;
-          transition: all 800ms;
+  -webkit-transition: top 800ms,
+                      left 800ms,
+                      height 800ms,
+                      width 800ms;
+     -moz-transition: top 800ms,
+                      left 800ms,
+                      height 800ms,
+                      width 800ms;
+       -o-transition: top 800ms,
+                      left 800ms,
+                      height 800ms,
+                      width 800ms;
+          transition: top 800ms,
+                      left 800ms,
+                      height 800ms,
+                      width 800ms;
 }
 
 header .logo > img.logo-text {
@@ -52,10 +64,22 @@ header .logo > img.logo-text {
   width: 170px;
   top: 64px;
   left: 20px;
-  -webkit-transition: all 800ms;
-     -moz-transition: all 800ms;
-       -o-transition: all 800ms;
-          transition: all 800ms;
+  -webkit-transition: top 800ms,
+                      left 800ms,
+                      height 800ms,
+                      width 800ms;
+     -moz-transition: top 800ms,
+                      left 800ms,
+                      height 800ms,
+                      width 800ms;
+       -o-transition: top 800ms,
+                      left 800ms,
+                      height 800ms,
+                      width 800ms;
+          transition: top 800ms,
+                      left 800ms,
+                      height 800ms,
+                      width 800ms;
 }
 
 header.fixed .logo > img.logo-icon {
@@ -94,14 +118,20 @@ nav {
   margin-top: 110px;
   left: 0;
   width: 100%;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -o-transform: translateX(100%);
   transform: translateX(100%);
-  -webkit-transition: transform 400ms, margin-top 800ms;
-  -moz-transition: transform 400ms, margin-top 800ms;
-  -o-transition: transform 400ms, margin-top 800ms;
+  -webkit-transition: -webkit-transform 400ms, margin-top 800ms;
+  -moz-transition: -moz-transform 400ms, margin-top 800ms;
+  -o-transition: -o-transform 400ms, margin-top 800ms;
   transition: transform 400ms, margin-top 800ms; /* easeInOutCubic */
 }
 
 nav.active {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -o-transform: translateX(0);
   transform: translateX(0);
 }
 
