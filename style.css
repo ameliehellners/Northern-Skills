@@ -93,30 +93,67 @@ header.fixed .logo > img.logo-text {
   top: 18px;
 }
 
-.menu-icons .icon {
-  color: #fff;
-  font-size: 45px;
-  line-height: 60px;
+
+/*** Hamburger menu icon ***/
+
+.menu-icon {
   float: right;
-  transition: color 200ms;
+  position: relative;
+  width: 38px;
+  height: 38px;
+  margin-top: 14px;
 }
 
-.menu-icons .ion-close-round {
-  font-size: 32px;
-  display: none;
-}
-
-.menu-icons .icon:hover {
-  color: #18c1e6;
-  cursor: pointer;
-}
-
-div.menu-icons.active .ion-navicon {
-  display: none;
-}
-
-div.menu-icons.active .ion-close-round {
+span {
+  position: absolute;
+  right: 0;
+  left: 0;
+  background-color: #fefefe;
+  height: 5px;
   display: block;
+  border-radius: 1px;
+  transition: all 200ms ease-in-out;
+}
+
+.menu-icon:hover span {
+  background-color: #18c1e6;
+}
+
+
+/* Induvidual placement of span elements */
+
+span:nth-child(1) {
+  top: 0;
+}
+
+span:nth-child(2) {
+  top: 13px;
+}
+
+span:nth-child(3) {
+  top: 26px;
+}
+
+
+/* When Activated */
+
+header.active .menu-icon span:nth-child(1) {
+  top: 13px;
+  transform: rotate(45deg);
+  left: -2px;
+  right: -2px;
+}
+
+header.active .menu-icon span:nth-child(2) {
+  right: 50%;
+  left: 50%;
+}
+
+header.active .menu-icon span:nth-child(3) {
+  top: 13px;
+  transform: rotate(-45deg);
+  left: -2px;
+  right: -2px;
 }
 
 
@@ -171,7 +208,7 @@ nav ul > a:hover {
   color: #18c1e6;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 420px) {
 
   header {
     height: 130px;
@@ -223,7 +260,7 @@ nav ul > a:hover {
     background-color: #131313;
   }
 
-  .menu-icons {
+  .menu-icon {
     display: none;
   }
 
