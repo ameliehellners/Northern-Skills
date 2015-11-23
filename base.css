@@ -75,6 +75,7 @@ p{
 /**** II : Layout ****/
 section{
 	background: peachpuff;
+	padding: 100px 0;
 }
 .container{
 	display: block;
