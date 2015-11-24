@@ -614,22 +614,14 @@ form.contact_form {
 
 /**** Media Queries *****/
 
-@media screen and (min-width: 400px){
-  .contact-square {
+@media screen and (max-width: 720px){
+
+ .contact-square {
     margin-left: 0px;
     margin-top: 80px;
     height: 300px;
-    width: 80%;
-  }
-}
-
-@media screen (min-width:400px) and (max-width: 720px){
-
-.contact-square {
-  margin-left: 20px;
-  margin-top: 80px;
-  height: 300px;
-  width: 60%;
+    width: 75%;
+    font-size: 0.8em;
   }
 
 .contact_input,
