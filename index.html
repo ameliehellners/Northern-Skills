@@ -6,6 +6,7 @@
 	<title>Northern Skills</title>
 	<link rel="stylesheet" type="text/css" href="base.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
 </head>
 <body id="home">
 
@@ -93,25 +94,32 @@
 
 </section>
 
-<section class="contact-map">
-
-	<div class="map">
-		<div class="contact-square white">
+<section id ="contact" class="contact-map">
+	<div class="contact-square white">
 		<h2>Kontakta oss</h2>
 		<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
 	</div>
-
-		<img class="google_map" src="https://maps.googleapis.com/maps/api/staticmap?zoom=1&size=400x400&markers(59.3317° N, 18.0883° E)&key=AIzaSyAGff9-4AXgsLXP3KrTrg9cPxp_ezZqln4"/>
+		
+	<div id="map">
 	</div>
 </section>
+
 <section class="contact">
-	<form class="contact_form"action="index.html" method="post">
+	<form class="contact_form" action="index.html" method="post">
 		<h3>Kontakta Oss</h3>
-			<textarea id="message" name="customer_message"></textarea>
-			<input type="text" id="name" name="customer_name">
-			<input type="email" id="email" name="customer_email">
+
+			<textarea id="message" name="customer_message" placeholder="Your Message"></textarea>
+
+		<div class ="contact_input">
+			<input type="text" id="name" name="customer_name" placeholder="Name">
+
+			<input type="email" id="email" name="customer_email" placeholder="Email">
+
 			<button class="btn" type="submit" id="submit_button">Skicka </button>
+		</div>
+			
 	</form>
+	</section>
 
 <footer class="p-all back-darkgrey white">
 	<div class="container flex flex-vertical-center">
@@ -140,7 +148,6 @@
 		<div class="clear"></div><!-- END .clear -->
 	</div><!-- END .container -->
 </footer>
-
 
 <script src="js/main.js"></script>
 </body>

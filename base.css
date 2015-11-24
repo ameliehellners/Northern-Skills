@@ -80,7 +80,6 @@ p{
 
 /**** II : Layout ****/
 section{
-	background: peachpuff;
 	padding: 50px 0;
 }
 @media (min-width: 740px){
@@ -191,6 +190,7 @@ section{
     color: #fff;
     text-align: center;
     cursor: pointer;
+    background-color: #01737e;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
