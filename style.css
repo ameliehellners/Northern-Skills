@@ -570,27 +570,33 @@ h1 {
   float:left;
 }
 
+#message, #name, #email{
+  border: none;
+  outline: none;
+  font-size: 0.8em;
+  background-color: #c4c4c4;
+  border-radius: 5px;
+
+}
+
 #message{
   width: 50%;
   float: left;
-  background-color: #c4c4c4;
   outline: none;
   resize: none;
-  border: none;
+  height: 2000px;
+  text-transform: uppercase;
   height: 200px;
 
 }
 
 #name, #email{
-  width: 50%;
-  margin-left: 10px;
-  margin-bottom: 10px;
+  width: 60%;
+  margin-left: 50px;
+  margin-bottom: 15px;
   display: block;
-  background-color: #c4c4c4;
-  outline: none;
-  border: none;
   height: 50px;
-
+  text-transform: uppercase;
 }
 
 section.contact {
@@ -602,19 +608,51 @@ form.contact_form {
 }
 
 #submit_button {
- margin-left: 190px;
- margin-top: 34px;
+ margin-left: 218px;
+ margin-top: 20px;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 720px){
 
 .contact_input,
 .contact_form,
   #contact,
   #name, 
   #email {
+    margin-top: 20px;
     width: 100%;
     float: left;
+    margin-left: 0;
+  }
+  #message {
+    width: 100%;
+    height: 150px;
+  }
+  #submit_button{
+    margin-left: 0;
   }
 
+}
+
+@media screen and (min-width: 720px) and (max-width: 1020px){
+  .contact_input,
+  .contact_form,
+  #contact,
+  #name, 
+  #email 
+  {
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-bottom: 5px;
+  }
+
+  #message {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 20px;
+  }
+  
+  }
 }
