@@ -612,7 +612,25 @@ form.contact_form {
  margin-top: 20px;
 }
 
-@media screen and (max-width: 720px){
+/**** Media Queries *****/
+
+@media screen and (min-width: 400px){
+  .contact-square {
+    margin-left: 0px;
+    margin-top: 80px;
+    height: 300px;
+    width: 80%;
+  }
+}
+
+@media screen (min-width:400px) and (max-width: 720px){
+
+.contact-square {
+  margin-left: 20px;
+  margin-top: 80px;
+  height: 300px;
+  width: 60%;
+  }
 
 .contact_input,
 .contact_form,
@@ -634,7 +652,15 @@ form.contact_form {
 
 }
 
-@media screen and (min-width: 720px) and (max-width: 1020px){
+@media screen and (min-width: 721px) and (max-width: 1020px){
+
+  .contact-square {
+    margin-left: 50px;
+    margin-top: 120px;
+    height: 300px;
+    width: 60%;
+  }
+
   .contact_input,
   .contact_form,
   #contact,
@@ -652,7 +678,5 @@ form.contact_form {
     width: 100%;
     height: 120px;
     margin-bottom: 20px;
-  }
-  
-  }
+  }  
 }
