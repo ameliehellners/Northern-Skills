@@ -543,6 +543,7 @@ h1 {
 
 /**** CONTACT ****/
 /*Contact form  */
+
 .contact-map {
   position: relative;
 }
@@ -556,7 +557,7 @@ h1 {
   position: absolute;
   top: 10px;
   left: 10px;
-  z-index: 100;
+  z-index: 20;
 }
 
 #map{
@@ -640,6 +641,10 @@ form.contact_form {
   }
   #submit_button{
     margin-left: 0;
+  }
+
+  section.contact{
+    padding-left: 20px;
   }
 
 }
