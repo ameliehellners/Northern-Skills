@@ -243,6 +243,7 @@ nav ul > a:hover {
     width: 180px;
     top: 14px;
   }
+
 }
 
 @media screen and (min-width: 600px) {
@@ -545,4 +546,141 @@ h1 {
 }
 .about-text {
 	background-color: #eaf8f9;
+}
+
+/**** CONTACT ****/
+/*Contact form  */
+
+.contact-map {
+  position: relative;
+}
+
+.contact-square {
+  margin-left: 120px;
+  margin-top: 120px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 50px;
+  width: 40%;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 20;
+}
+
+#map{
+  width: 100%;
+  height: 400px;
+  z-index: 0;
+}
+
+.contact_input{
+  width: 50%;
+  float:left;
+}
+
+#message, #name, #email{
+  border: none;
+  outline: none;
+  font-size: 0.8em;
+  background-color: #c4c4c4;
+  border-radius: 5px;
+
+}
+
+#message{
+  width: 50%;
+  float: left;
+  outline: none;
+  resize: none;
+  height: 2000px;
+  text-transform: uppercase;
+  height: 200px;
+
+}
+
+#name, #email{
+  width: 60%;
+  margin-left: 50px;
+  margin-bottom: 15px;
+  display: block;
+  height: 50px;
+  text-transform: uppercase;
+}
+
+section.contact {
+  padding: 0 100px 50px 100px;
+  overflow: auto;
+}
+form.contact_form {
+  width: 100%;
+}
+
+#submit_button {
+ margin-left: 218px;
+ margin-top: 20px;
+}
+
+/**** Media Queries *****/
+
+@media screen and (max-width: 720px){
+
+ .contact-square {
+    margin-left: 0px;
+    margin-top: 80px;
+    height: 300px;
+    width: 75%;
+    font-size: 0.8em;
+  }
+
+.contact_input,
+.contact_form,
+  #contact,
+  #name, 
+  #email {
+    margin-top: 20px;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+  }
+  #message {
+    width: 100%;
+    height: 150px;
+  }
+  #submit_button{
+    margin-left: 0;
+  }
+
+  section.contact{
+    padding-left: 20px;
+  }
+
+}
+
+@media screen and (min-width: 721px) and (max-width: 1020px){
+
+  .contact-square {
+    margin-left: 50px;
+    margin-top: 120px;
+    height: 300px;
+    width: 60%;
+  }
+
+  .contact_input,
+  .contact_form,
+  #contact,
+  #name, 
+  #email 
+  {
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-bottom: 5px;
+  }
+
+  #message {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 20px;
+  }  
 }
