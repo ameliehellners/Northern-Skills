@@ -9,7 +9,13 @@ menuBtn.addEventListener('click', function (){
    toggleClass(head, 'active');
 });
 
+// Scroll event
 window.onscroll = function() {
+  scrolling(head, 'fixed', '20');
+};
+
+// Touch event
+document.ontouchmove = function(event) {
   scrolling(head, 'fixed', '20');
 };
 
