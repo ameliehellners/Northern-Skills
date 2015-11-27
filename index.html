@@ -11,19 +11,22 @@
 
 <header id="head">
 
-	<a href="#home">
+	<a href="index.html#home">
 		<div class="logo">
 			<img class="logo-text" alt="Northern Skills logga" src="img/logo-text.svg">
 			<img class="logo-icon" alt="Northern Skills logga" src="img/logo-mountains.svg">
 		</div>
 	</a>
 
-	<i id="menuIcon" class="icon ion-navicon"></i>
+	<div id="menuIcon" class="menu-icon">
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	</div>
 	<nav id="nav">
 		<ul>
 			<a href="#about"><li>Om oss</li></a>
 			<a href="#portfolio"><li>Portfolio</li></a>
-			<a href="#"><li>Kunder</li></a>
 			<a href="#contact"><li>Kontakt</li></a>
 		</ul>
 	</nav>
@@ -35,7 +38,7 @@
 		<p>
 			Proin in neque et turpis Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
 		</p>
-		<button class="btn btn-primary" name="read_more">Läs mer</button>
+		<a href="om-oss.html" class="btn btn-primary" name="read_more">Läs mer</a>
 	</div>
 </section>
 
@@ -43,7 +46,7 @@
 	<div class="about-text container p-all">
 		<h2 class="about-header">Northern Skills</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis culpa quis reiciendis officiis perspiciatis asperiores eius recusandae ipsa earum aliquam et maiores fugit porro quisquam doloribus, velit eligendi fugiat similique accusamus totam adipisci numquam architecto exercitationem amet. Omnis ducimus laudantium earum fugiat fugit quidem maxime rerum, neque, similique natus esse temporibus fuga molestiae. Hejåhå.</p>
-		<button class="btn btn-primary" name="read_more">Läs mer</button>
+		<a href="om-oss.html" class="btn btn-primary" name="read_more">Läs mer</a>
 	</div>
 </section>
 
@@ -88,9 +91,32 @@
 	</div>
 </section>
 
-<section>
-	Kontakt
+<section id ="contact" class="contact-map">
+	<div class="contact-square white">
+		<h2>Kontakta oss</h2>
+		<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+	</div>
+		
+	<div id="map">
+	</div>
 </section>
+
+<section class="contact">
+	<form class="contact_form" action="index.html" method="post">
+		<h3>Kontakta Oss</h3>
+
+			<textarea id="message" name="customer_message" placeholder="Your Message"></textarea>
+
+		<div class ="contact_input">
+			<input type="text" id="name" name="customer_name" placeholder="Name">
+
+			<input type="email" id="email" name="customer_email" placeholder="Email">
+
+			<button class="btn btn-primary" type="submit" id="submit_button">Skicka </button>
+		</div>
+			
+	</form>
+	</section>
 
 <footer class="p-all back-darkgrey white">
 	<div class="container flex flex-vertical-center">
@@ -119,8 +145,7 @@
 		<div class="clear"></div><!-- END .clear -->
 	</div><!-- END .container -->
 </footer>
-
-
+<script src="https://maps.googleapis.com/maps/api/js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

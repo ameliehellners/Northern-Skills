@@ -4,6 +4,10 @@ section.landing {
   background: #333 url('img/landing_bg.jpg') center center no-repeat;
   background-size: cover;
 }
+section.landing-thin{
+  padding: 180px 0 40px!important;
+  text-align: center;
+}
 
 /* Header */
 
@@ -93,18 +97,66 @@ header.fixed .logo > img.logo-text {
   top: 18px;
 }
 
-.ion-navicon {
-  color: #fff;
-  font-size: 45px;
-  line-height: 60px;
+
+/*** Hamburger menu icon ***/
+
+.menu-icon {
   float: right;
-  transition: color 200ms;
+  position: relative;
+  width: 38px;
+  height: 38px;
+  margin-top: 14px;
 }
 
-.ion-navicon:hover,
-header i.active {
-  color: #18c1e6;
-  cursor: pointer;
+span {
+  position: absolute;
+  right: 0;
+  left: 0;
+  background-color: #fefefe;
+  height: 5px;
+  display: block;
+  border-radius: 1px;
+  -webkit-transition: all 200ms;
+     -moz-transition: all 200ms;
+       -o-transition: all 200ms;
+          transition: all 200ms;
+}
+
+
+/* Induvidual placement of span elements */
+
+span:nth-child(1) {
+  top: 0;
+}
+
+span:nth-child(2) {
+  top: 13px;
+}
+
+span:nth-child(3) {
+  top: 26px;
+}
+
+
+/* When Activated */
+
+header.active .menu-icon span:nth-child(1) {
+  top: 13px;
+  transform: rotate(45deg);
+  left: -2px;
+  right: -2px;
+}
+
+header.active .menu-icon span:nth-child(2) {
+  right: 50%;
+  left: 50%;
+}
+
+header.active .menu-icon span:nth-child(3) {
+  top: 13px;
+  transform: rotate(-45deg);
+  left: -2px;
+  right: -2px;
 }
 
 
@@ -150,7 +202,11 @@ nav ul > a {
   display: block;
   text-align: center;
   height: 44px;
+  font-size: 1.25rem;
   line-height: 44px;
+  -webkit-transition: color 200ms, background-color 300ms;
+  -moz-transition: color 200ms, background-color 300ms;
+  -o-transition: color 200ms, background-color 300ms;
   transition: color 200ms, background-color 300ms;
 }
 
@@ -159,7 +215,7 @@ nav ul > a:hover {
   color: #18c1e6;
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 420px) {
 
   header {
     height: 130px;
@@ -191,12 +247,13 @@ nav ul > a:hover {
     width: 180px;
     top: 14px;
   }
+
 }
 
-@media screen and (min-width: 670px) {
+@media screen and (min-width: 600px) {
 
   section.landing {
-    padding: 200px 0 120px;
+    padding: 260px 0 140px;
   }
 
   header {
@@ -211,7 +268,7 @@ nav ul > a:hover {
     background-color: #131313;
   }
 
-  .ion-navicon {
+  .menu-icon {
     display: none;
   }
 
@@ -257,7 +314,6 @@ nav ul > a:hover {
 
   nav ul > a:hover {
     color: #18c1e6;
-    border-bottom: 1px solid;
   }
 }
 
@@ -265,7 +321,7 @@ nav ul > a:hover {
 @media screen and (min-width: 1240px) {
 
   section.landing {
-    padding: 240px 0 140px;
+    padding: 280px 0 200px;
   }
 
   header {
@@ -494,4 +550,141 @@ h1 {
 }
 .about-text {
 	background-color: #eaf8f9;
+}
+
+/**** CONTACT ****/
+/*Contact form  */
+
+.contact-map {
+  position: relative;
+}
+
+.contact-square {
+  margin-left: 120px;
+  margin-top: 120px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 50px;
+  width: 40%;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 20;
+}
+
+#map{
+  width: 100%;
+  height: 400px;
+  z-index: 0;
+}
+
+.contact_input{
+  width: 50%;
+  float:left;
+}
+
+#message, #name, #email{
+  border: none;
+  outline: none;
+  font-size: 0.8em;
+  background-color: #c4c4c4;
+  border-radius: 5px;
+
+}
+
+#message{
+  width: 50%;
+  float: left;
+  outline: none;
+  resize: none;
+  height: 2000px;
+  text-transform: uppercase;
+  height: 200px;
+
+}
+
+#name, #email{
+  width: 60%;
+  margin-left: 50px;
+  margin-bottom: 15px;
+  display: block;
+  height: 50px;
+  text-transform: uppercase;
+}
+
+section.contact {
+  padding: 0 100px 50px 100px;
+  overflow: auto;
+}
+form.contact_form {
+  width: 100%;
+}
+
+#submit_button {
+ margin-left: 218px;
+ margin-top: 20px;
+}
+
+/**** Media Queries *****/
+
+@media screen and (max-width: 720px){
+
+ .contact-square {
+    margin-left: 0px;
+    margin-top: 80px;
+    height: 300px;
+    width: 75%;
+    font-size: 0.8em;
+  }
+
+.contact_input,
+.contact_form,
+  #contact,
+  #name, 
+  #email {
+    margin-top: 20px;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+  }
+  #message {
+    width: 100%;
+    height: 150px;
+  }
+  #submit_button{
+    margin-left: 0;
+  }
+
+  section.contact{
+    padding-left: 20px;
+  }
+
+}
+
+@media screen and (min-width: 721px) and (max-width: 1020px){
+
+  .contact-square {
+    margin-left: 50px;
+    margin-top: 120px;
+    height: 300px;
+    width: 60%;
+  }
+
+  .contact_input,
+  .contact_form,
+  #contact,
+  #name, 
+  #email 
+  {
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-bottom: 5px;
+  }
+
+  #message {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 20px;
+  }  
 }
