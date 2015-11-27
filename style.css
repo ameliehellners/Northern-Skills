@@ -4,6 +4,10 @@ section.landing {
   background: #333 url('img/landing_bg.jpg') center center no-repeat;
   background-size: cover;
 }
+section.landing-thin{
+  padding: 180px 0 40px!important;
+  text-align: center;
+}
 
 /* Header */
 
@@ -112,7 +116,10 @@ span {
   height: 5px;
   display: block;
   border-radius: 1px;
-  transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms;
+     -moz-transition: all 200ms;
+       -o-transition: all 200ms;
+          transition: all 200ms;
 }
 
 
@@ -195,7 +202,11 @@ nav ul > a {
   display: block;
   text-align: center;
   height: 44px;
+  font-size: 1.25rem;
   line-height: 44px;
+  -webkit-transition: color 200ms, background-color 300ms;
+  -moz-transition: color 200ms, background-color 300ms;
+  -o-transition: color 200ms, background-color 300ms;
   transition: color 200ms, background-color 300ms;
 }
 
