@@ -197,7 +197,7 @@ nav ul {
   padding: 0;
 }
 
-nav ul > a {
+nav ul a {
   color: #fff;
   display: block;
   text-align: center;
@@ -210,7 +210,7 @@ nav ul > a {
   transition: color 200ms, background-color 300ms;
 }
 
-nav ul > a:hover {
+nav ul a:hover {
   background-color: #444;
   color: #18c1e6;
 }
@@ -289,31 +289,35 @@ nav ul > a:hover {
 
   nav ul {
     list-style: none;
-    width: 100%;
+    width: auto;
   }
 
-  nav ul a li {
-    float: left;
+  nav ul li {
+    display: inline;
+  }
+
+  nav ul a {
     margin-left: 30px;
-    -webkit-transition: margin 800ms;
-       -moz-transition: margin 800ms;
-         -o-transition: margin 800ms;
-            transition: margin 800ms;
-  }
-
-  nav ul a:first-of-type li {
-    margin-left: 0;
-  }
-
-  nav ul > a {
     display: inline;
     font-size: 1rem;
     color: #fefefe;
-    transition: color 200ms;
+    float: left;
+    -webkit-transition: color 200ms,
+                        margin 800ms;
+       -moz-transition: color 200ms,
+                        margin 800ms;
+         -o-transition: color 200ms,
+                        margin 800ms;
+            transition: color 200ms,
+                        margin 800ms;
   }
 
-  nav ul > a:hover {
-    color: #18c1e6;
+  nav ul li:first-of-type a {
+    margin-left: 0;
+  }
+
+  nav ul li a:hover {
+    background-color: transparent;
   }
 }
 
@@ -356,7 +360,7 @@ nav ul > a:hover {
     top: 16px;
   }
 
-  nav ul a li {
+  nav ul li a {
     margin-left: 50px;
   }
 }
